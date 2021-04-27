@@ -28,5 +28,6 @@ if __name__ == '__main__':
             if in_stock:
                 text_me(in_stock_message)
                 call_me()
+                print(f'In stock!\n{site}')
             else:
                 print(f'Not in stock:\n{site}')
