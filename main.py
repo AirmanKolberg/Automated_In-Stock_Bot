@@ -21,8 +21,10 @@ def check_if_product_in_stock(product_link):
 
 if __name__ == '__main__':
     while True:
+        # Closes app if all products are in-stock
         if product_sites == list():
             exit()
+
         for site in product_sites:
             in_stock_message = f"In stock!  Click link:\n{site}"
             in_stock = check_if_product_in_stock(site)
