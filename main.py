@@ -13,8 +13,9 @@ def check_if_product_in_stock(product_link):
     firefox.get(product_link)
     source_code = firefox.page_source
 
-    if 'out of stock' in source_code:
-        return False
+    for tag in out_of_stock_tags:
+        if tag in source_code:
+            return False
     return True
 
 
