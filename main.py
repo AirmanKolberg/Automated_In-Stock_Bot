@@ -29,5 +29,6 @@ if __name__ == '__main__':
                 text_me(in_stock_message)
                 call_me()
                 print(f'In stock!\n{site}')
-            else:
-                print(f'Not in stock:\n{site}')
+
+                # Remove site from list to prevent repeat notifications
+                product_sites.remove(site)
