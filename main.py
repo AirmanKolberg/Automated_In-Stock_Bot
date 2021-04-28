@@ -12,6 +12,7 @@ def check_if_product_in_stock(product_link):
 
     firefox.get(product_link)
     source_code = firefox.page_source
+    firefox.close()
 
     for tag in out_of_stock_tags:
         if tag in source_code:
@@ -26,15 +27,15 @@ if __name__ == '__main__':
             exit()
 
         for site in product_sites:
-            in_stock_message = f"In stock!  Click link:\n{site}"
+            in_stock_message = f"{product_sites[site]} in stock!  Link:\n{site}"
             in_stock = check_if_product_in_stock(site)
-
+    
             if in_stock:
                 text_me(in_stock_message)
                 call_me()
-                print(f'In stock!\n{site}')
-
+                print(in_stock_message)
+    
                 # Remove site from list to prevent repeat notifications
-                product_sites.remove(site)
+                product_sites.pop(site)
             else:
-                print(f'Not in stock:\n{site}')
+                print(f'{product_sites[site]} not in stock:\n{site}\n')
