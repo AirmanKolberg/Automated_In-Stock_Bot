@@ -1,5 +1,8 @@
-# This list should be filled with links to places where the product you desire is normally in-stock
-product_sites = ['https://www.isitinyet.com/my-product/123', 'http://www.howaboutnow.net/products/123/']
+# This dictionary's keys should be links to sites to buy a product, and the value is the product name
+product_sites = {
+    'https://www.bestbuy.com/cool-new-tv/': '60-inch Sony TV',
+    'https://www.amazon.com/big-black-box-of-nothing/': 'Black Wooden Box'
+    }
 
 # This list should contain a list of tags that are normally shown on your site(s) when out-of-stock
 out_of_stock_tags = ['out of stock', 'None in Stock', 'Out of Stock']
