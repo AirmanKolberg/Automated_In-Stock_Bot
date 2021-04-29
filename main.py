@@ -26,7 +26,7 @@ def check_if_product_in_stock(product_link):
     return True
 
 
-if __name__ == '__main__':
+def main_function():
     while True:
         # Closes app if all products are in-stock
         if product_sites == list():
@@ -46,3 +46,10 @@ if __name__ == '__main__':
                 product_sites.pop(site)
             else:
                 print(f'{product_sites[site]} not in stock:\n{site}\n')
+
+
+if __name__ == '__main__':
+    try:
+        main_function()
+    except Exception:
+        main_function()
