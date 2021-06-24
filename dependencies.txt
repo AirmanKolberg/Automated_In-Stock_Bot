@@ -1,2 +1,0 @@
-selenium    -     pip(3) install selenium
-twilio      -     pip(3) install twilio
