@@ -5,7 +5,7 @@ Thankfully, this can all be done in the background, as I've added options in sel
 
 Steps for a Successful Setup:
 - Ensure you can run Python scripts
-- pip (or pip3) install both selenium and twilio
+- `pip install -r requirements.txt`
 - Set up a Twilio account (free on their website) and insert necessary information into secrets.py
 - Add a list of links and out-of-stock tags in secrets.py (examples given)
 - python3 main.py and you're good to go!
